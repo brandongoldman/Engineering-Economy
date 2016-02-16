@@ -86,6 +86,10 @@ End Function
 'Michelle's Functions that conform to Cory's dictator-like naming constraints
 '--- --- --- --- --- --- --- --- --- --- --- ---
 
+'--- --- --- --- --- --- --- --- --- --- --- ---
+'Single Payment
+'--- --- --- --- --- --- --- --- --- --- --- ---
+
 Function P1F0i0n(F, i, n, disp)
 '(P/F, i, n)
 'P = F*(1+i)^-n
@@ -98,6 +102,10 @@ Function P1F0i0n(F, i, n, disp)
 
 End Function
 
+'--- --- --- --- --- --- --- --- --- --- --- ---
+'Uniform Series
+'--- --- --- --- --- --- --- --- --- --- --- ---
+
 Function F1A0i0n(A, i, n, disp)
 '(F/A, i, n)
 'F = A * [(1 + i) ^ n - 1) / i]
@@ -109,7 +117,7 @@ Function F1A0i0n(A, i, n, disp)
   End If
 
 End Function
-
+'--- --- --- --- --- --- --- --- --- --- --- ---
 Function A1F0i0n(F, i, n, disp)
 '(A/F, i, n)
 'A = F * [i / ((1 + i)^n - 1)]
@@ -121,7 +129,7 @@ Function A1F0i0n(F, i, n, disp)
   End If
 
 End Function
-
+'--- --- --- --- --- --- --- --- --- --- --- ---
 Function A1P0i0n(P, i, n, disp)
 '(A/P, i, n)
 'A = P * [(i * (1 + i)^n) / ((1 + i)^n - 1)]
@@ -133,7 +141,7 @@ Function A1P0i0n(P, i, n, disp)
   End If
 
 End Function
-
+'--- --- --- --- --- --- --- --- --- --- --- ---
 Function P1A0i0n(A, i, n, disp)
 '(P/A, i, n)
 'P = A * [((1 + i)^n - 1) / (i * (1 + i)^n)]
@@ -145,6 +153,110 @@ Function P1A0i0n(A, i, n, disp)
   End If
 
 End Function
+
+'--- --- --- --- --- --- --- --- --- --- --- ---
+'Continuous Compounding at Nominal Rate r : Single Payment
+'--- --- --- --- --- --- --- --- --- --- --- ---
+
+Function SinglePaymentF(P, e, r, n, disp)
+'F = P* e^(r*n)
+
+  If disp Then
+    SinglePaymentF = "F = P* e^(r*n)"
+  Else
+    SinglePaymentF = P * exp(r * n)
+  End If
+
+End Function
+'--- --- --- --- --- --- --- --- --- --- --- ---
+Function SinglePaymentP(F, e, r, n, disp)
+'P = F*e^(-r*n)
+
+  If disp Then
+    SinglePaymentP = "P = F * e^(-r*n)"
+  Else
+    SinglePaymentP = F * exp(-r*n)
+  End If
+
+End Function
+
+'--- --- --- --- --- --- --- --- --- --- --- ---
+'Continuous Compounding at Nominal Rate r : Uniform Series
+'--- --- --- --- --- --- --- --- --- --- --- ---
+
+Function UniformCompooundA1(F, r, n, disp)
+'A = F * [(e^r - 1) / (e^r*n - 1)]
+
+  If disp Then
+    UniformCompooundA1 = "F * [(e^r - 1) / (e^r*n - 1)]"
+  Else
+    UniformCompooundA1 = F * [(exp(r) - 1) / (exp(r*n) - 1)]
+  End If
+
+End Function
+'--- --- --- --- --- --- --- --- --- --- --- ---
+Function UniformCompoundA2(P, r, n, disp)
+'A = P * [(e^(r*n) * (e^(r) - 1)) / (e^(r*n) - 1)]
+
+  If disp Then
+    UniformCompoundA2 = "A = P * [(e^(r*n) * (e^(r) - 1)) / (e^(r*n) - 1)]"
+  Else
+    UniformCompoundA2 = P * [(exp(r*n) * (exp(r) - 1)) / (exp(r*n) - 1)]
+  End If
+
+End Function
+'--- --- --- --- --- --- --- --- --- --- --- ---
+Function UniformCompoundF(A, r, n, disp)
+'F = A * [(e^(r*n) - 1) /  (e^(r) - 1)]
+
+  If disp Then
+    UniformCompoundF = "F = A * [(e^(r*n) - 1) /  (e^(r) - 1)]"
+  Else
+    UniformCompoundF =A * [(exp(r*n) - 1) /  (exp(r) - 1)]
+  End If
+
+End Function
+'--- --- --- --- --- --- --- --- --- --- --- ---
+Function UniformCompoundP(A, r, n, disp)
+'P = A * [(e^(r*n) - 1) / (e^(r*n) * (e^(r) - 1))]
+
+  If disp Then
+    UniformCompoundP = "P = A * [(e^(r*n) - 1) / (e^(r*n) * (e^(r) - 1))]"
+  Else
+    UniformCompoundP =  A * [(exp(r*n) - 1) / (exp(r*n) * (exp(r) - 1))]
+  End If
+
+End Function
+
+'--- --- --- --- --- --- --- --- --- --- --- ---
+' Continuous Uniform Cash Flow with Continuous Compounding : Present Worth
+'--- --- --- --- --- --- --- --- --- --- --- ---
+
+Function P1F0r0n(F, r, n, disp)
+'(P/F, r, n)
+'P = F * [(e^(r)-1) / (r * e^(r*n))]
+  If disp Then
+    P1F0r0n = "P = F * [(e^(r)-1) / (r * e^(r*n))]"
+  Else
+    P1F0r0n = F * [(exp(r)-1) / (r * exp(r*n))]
+  End If
+
+End Function
+'--- --- --- --- --- --- --- --- --- --- --- ---
+' Continuous Uniform Cash Flow with Continuous Compounding : Compound Amount
+'--- --- --- --- --- --- --- --- --- --- --- ---
+Function F1P0r0n(P, r, n, disp)
+'(F/P, r, n)
+'F = P * [( (e^(r) - 1) * (e^(r*n)) ) / (r*e^(r))]
+  If disp Then
+    F1P0r0n = "F = P * [( (e^(r) - 1) * (e^(r*n)) ) / (r*e^(r))]"
+  Else
+    F1P0r0n = P * [( (exp(r) - 1) * (exp(r*n)) ) / (r*exp(r))]
+  End If
+
+End Function
+
+
 
 '--- --- --- --- --- --- --- --- --- --- --- ---
 'Cory's Functions
