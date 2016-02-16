@@ -82,6 +82,69 @@ Function Q333(initial, n, period, r, disp)
     End If
 
 End Function
+'--- --- --- --- --- --- --- --- --- --- --- ---
+'Michelle's Functions that conform to Cory's dictator-like naming constraints
+'--- --- --- --- --- --- --- --- --- --- --- ---
+
+Function P1F0i0n(F, i, n, disp)
+'(P/F, i, n)
+'P = F*(1+i)^-n
+
+  If disp Then
+    P1F0i0n = "P = F*(1+i)^-n"
+  Else
+    P1F0i0n = F*(1+i)^-n
+  End If
+
+End Function
+
+Function F1A0i0n(A, i, n, disp)
+'(F/A, i, n)
+'F = A * [(1 + i) ^ n - 1) / i]
+
+  If disp Then
+    F1A0i0n = "F = A * [(1 + i) ^ n - 1) / i]"
+  Else
+    F1A0i0n = A * [(1 + i) ^ n - 1) / i]
+  End If
+
+End Function
+
+Function A1F0i0n(F, i, n, disp)
+'(A/F, i, n)
+'A = F * [i / ((1 + i)^n - 1)]
+
+  If disp Then
+    A1F0i0n = "A = F * [i / ((1 + i)^n - 1)]"
+  Else
+    A1F0i0n = F * [i / ((1 + i)^n - 1)]
+  End If
+
+End Function
+
+Function A1P0i0n(P, i, n, disp)
+'(A/P, i, n)
+'A = P * [(i * (1 + i)^n) / ((1 + i)^n - 1)]
+
+  If disp Then
+    A1P0i0n = "A = P * [(i * (1 + i)^n) / ((1 + i)^n - 1)]"
+  Else
+    A1P0i0n = P * [(i * (1 + i)^n) / ((1 + i)^n - 1)]
+  End If
+
+End Function
+
+Function P1A0i0n(A, i, n, disp)
+'(P/A, i, n)
+'P = A * [((1 + i)^n - 1) / (i * (1 + i)^n)]
+
+  If disp Then
+    P1A0i0n = "P = A * [((1 + i)^n - 1) / (i * (1 + i)^n)]"
+  Else
+    P1A0i0n = A * [((1 + i)^n - 1) / (i * (1 + i)^n)]
+  End If
+
+End Function
 
 '--- --- --- --- --- --- --- --- --- --- --- ---
 'Cory's Functions
