@@ -10,15 +10,17 @@ Formula ID:
 (F/P,i,n)
 
 '''
-Function F1P0i0n(P, i, n, disp)
-    
-    If disp Then
-        F1P0i0n = "F = P(1+r)^n"
-    Else
-        F1P0i0n = P * (1 + r) ^ n
-    End If
 
-End Function
+    Function F1P0i0n(P, i, n, disp)
+    
+        If disp Then
+            F1P0i0n = "F = P(1+r)^n"
+        Else
+            F1P0i0n = P * (1 + r) ^ n
+        End If
+
+    End Function
+
 '''
 
 ### Naming
