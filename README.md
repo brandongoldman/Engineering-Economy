@@ -11,8 +11,6 @@ Formula ID:
 
 '''
 Function F1P0i0n(P, i, n, disp)
-    '(F/P,i,n)
-    'F = P(1+r)^n
     
     If disp Then
         F1P0i0n = "F = P(1+r)^n"
