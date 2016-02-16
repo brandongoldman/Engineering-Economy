@@ -9,8 +9,6 @@ F = P(1+r)^n
 Formula ID:
 (F/P,i,n)
 
-'''
-
     Function F1P0i0n(P, i, n, disp)
     
         If disp Then
@@ -20,8 +18,6 @@ Formula ID:
         End If
 
     End Function
-
-'''
 
 ### Naming
 Take ID of a formula. (See example).
