@@ -251,7 +251,7 @@ Function e_P1F0r0n(F, r, n, disp)
 
 End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
-' Continuous Uniform Cash Flow with Continuous Compounding : Compound Amount
+' Continuous Uniform Cash Flow with Continuous Compounding : Compound Amount Over Period n
 '--- --- --- --- --- --- --- --- --- --- --- ---
 Function e_F1P0r0n(P, r, n, disp)
 '(F/P, r, n)
