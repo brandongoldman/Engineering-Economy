@@ -1,8 +1,8 @@
-
+Attribute VB_Name = "DontMessWithCS"
 '--- --- --- --- --- --- --- --- --- --- --- ---
 'Quiz 3.2
 '--- --- --- --- --- --- --- --- --- --- --- ---
-Function Q321I(A, n, r, disp)
+Function e_Q321I(A, n, r, disp)
 'F = A*(1-(1+r)^-n)/r
 
     If disp Then
@@ -13,7 +13,7 @@ Function Q321I(A, n, r, disp)
 
 End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
-Function Q322F(A, n, r, disp)
+Function e_Q322F(A, n, r, disp)
 'F = A*(1-(1+r)^-n)/r
 
     If disp Then
@@ -24,7 +24,7 @@ Function Q322F(A, n, r, disp)
 
 End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
-Function Q323A(F, r, disp)
+Function e_Q323A(F, r, disp)
 'F = A*(1-(1+r)^-n)/r
     If disp Then
       Q323A = "F = A*(1-(1+r)^-n)/r , n = inf"
@@ -37,7 +37,7 @@ End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
 'Quiz 3.3
 '--- --- --- --- --- --- --- --- --- --- --- ---
-Function Q331A(m, n, P, r, disp)
+Function e_Q331A(m, n, P, r, disp)
 'A = P * r / (1 - (1+r)^-n)
 
     If disp Then
@@ -48,7 +48,7 @@ Function Q331A(m, n, P, r, disp)
 
 End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
-Function Q331P(A, m, n, r, disp)
+Function e_Q331P(A, m, n, r, disp)
 'P = (1+r)^-m * A * ((1-(1+r)^-n)/r)
 
     If disp Then
@@ -60,7 +60,7 @@ Function Q331P(A, m, n, r, disp)
 End Function
 
 '--- --- --- --- --- --- --- --- --- --- --- ---
-Function Q332A(r, x1, x2, x3, disp)
+Function e_Q332A(r, x1, x2, x3, disp)
 'P1 = x1 + x2(1+r)^-1 + x3(1+r)^-2
 'P2 = A(1 + (1+r)^-1 + (1+r)^-2)
 
@@ -72,7 +72,7 @@ Function Q332A(r, x1, x2, x3, disp)
 
 End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
-Function Q333(initial, n, period, r, disp)
+Function e_Q333(initial, n, period, r, disp)
   'A(1-(1+r)^(-n+k-1))/r
 
     If disp Then
@@ -83,13 +83,14 @@ Function Q333(initial, n, period, r, disp)
 
 End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
-'Michelle's Functions that conform to Cory's dictator-like naming constraints
+' Michelle's Functions that conform to Cory's dictator-like naming constraints
+' They make it easier to identify the equations from their names!
 '--- --- --- --- --- --- --- --- --- --- --- ---
 
 '--- --- --- --- --- --- --- --- --- --- --- ---
 'Single Payment
 '--- --- --- --- --- --- --- --- --- --- --- ---
-Function F1P0i0n(P, i, n, disp)
+Function e_F1P0i0n(P, i, n, disp)
 '(F/P,i,n)
 'F = P(1+r)^n
 
@@ -101,7 +102,7 @@ Function F1P0i0n(P, i, n, disp)
 
 End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
-Function P1F0i0n(F, i, n, disp)
+Function e_P1F0i0n(F, i, n, disp)
 '(P/F, i, n)
 'P = F*(1+i)^-n
 
@@ -116,7 +117,7 @@ End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
 'Uniform Series
 '--- --- --- --- --- --- --- --- --- --- --- ---
-Function F1A0i0n(A, i, n, disp)
+Function e_F1A0i0n(A, i, n, disp)
 '(F/A, i, n)
 'F = A * [(1 + i) ^ n - 1) / i]
 
@@ -128,7 +129,7 @@ Function F1A0i0n(A, i, n, disp)
 
 End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
-Function A1F0i0n(F, i, n, disp)
+Function e_A1F0i0n(F, i, n, disp)
 '(A/F, i, n)
 'A = F * [i / ((1 + i)^n - 1)]
 
@@ -140,7 +141,7 @@ Function A1F0i0n(F, i, n, disp)
 
 End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
-Function A1P0i0n(P, i, n, disp)
+Function e_A1P0i0n(P, i, n, disp)
 '(A/P, i, n)
 'A = P * [(i * (1 + i)^n) / ((1 + i)^n - 1)]
 
@@ -152,7 +153,7 @@ Function A1P0i0n(P, i, n, disp)
 
 End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
-Function P1A0i0n(A, i, n, disp)
+Function e_P1A0i0n(A, i, n, disp)
 '(P/A, i, n)
 'P = A * [((1 + i)^n - 1) / (i * (1 + i)^n)]
 
@@ -167,7 +168,7 @@ End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
 'Continuous Compounding at Nominal Rate r : Single Payment
 '--- --- --- --- --- --- --- --- --- --- --- ---
-Function SinglePaymentF(P, e, r, n, disp)
+Function e_SinglePaymentF(P, e, r, n, disp)
 'F = P* e^(r*n)
 
   If disp Then
@@ -178,7 +179,7 @@ Function SinglePaymentF(P, e, r, n, disp)
 
 End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
-Function SinglePaymentP(F, e, r, n, disp)
+Function e_SinglePaymentP(F, e, r, n, disp)
 'P = F*e^(-r*n)
 
   If disp Then
@@ -192,7 +193,7 @@ End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
 'Continuous Compounding at Nominal Rate r : Uniform Series
 '--- --- --- --- --- --- --- --- --- --- --- ---
-Function UniformCompooundA1(F, r, n, disp)
+Function e_UniformCompooundA1(F, r, n, disp)
 'A = F * [(e^r - 1) / (e^r*n - 1)]
 
   If disp Then
@@ -203,7 +204,7 @@ Function UniformCompooundA1(F, r, n, disp)
 
 End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
-Function UniformCompoundA2(P, r, n, disp)
+Function e_UniformCompoundA2(P, r, n, disp)
 'A = P * [(e^(r*n) * (e^(r) - 1)) / (e^(r*n) - 1)]
 
   If disp Then
@@ -214,7 +215,7 @@ Function UniformCompoundA2(P, r, n, disp)
 
 End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
-Function UniformCompoundF(A, r, n, disp)
+Function e_UniformCompoundF(A, r, n, disp)
 'F = A * [(e^(r*n) - 1) /  (e^(r) - 1)]
 
   If disp Then
@@ -225,7 +226,7 @@ Function UniformCompoundF(A, r, n, disp)
 
 End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
-Function UniformCompoundP(A, r, n, disp)
+Function e_UniformCompoundP(A, r, n, disp)
 'P = A * [(e^(r*n) - 1) / (e^(r*n) * (e^(r) - 1))]
 
   If disp Then
@@ -239,7 +240,7 @@ End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
 ' Continuous Uniform Cash Flow with Continuous Compounding : Present Worth
 '--- --- --- --- --- --- --- --- --- --- --- ---
-Function P1F0r0n(F, r, n, disp)
+Function e_P1F0r0n(F, r, n, disp)
 '(P/F, r, n)
 'P = F * [(e^(r)-1) / (r * e^(r*n))]
   If disp Then
@@ -252,7 +253,7 @@ End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
 ' Continuous Uniform Cash Flow with Continuous Compounding : Compound Amount
 '--- --- --- --- --- --- --- --- --- --- --- ---
-Function F1P0r0n(P, r, n, disp)
+Function e_F1P0r0n(P, r, n, disp)
 '(F/P, r, n)
 'F = P * [( (e^(r) - 1) * (e^(r*n)) ) / (r*e^(r))]
   If disp Then
