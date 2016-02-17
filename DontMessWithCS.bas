@@ -124,7 +124,7 @@ Function e_F1A0i0n(A, i, n, disp)
   If disp Then
     e_F1A0i0n = "F = A * [(1 + i) ^ n - 1) / i]"
   Else
-    e_F1A0i0n = A * [(1 + i) ^ n - 1) / i]
+    e_F1A0i0n = A * ((1 + i) ^ n - 1) / i)
   End If
 
 End Function
@@ -136,7 +136,7 @@ Function e_A1F0i0n(F, i, n, disp)
   If disp Then
     e_A1F0i0n = "A = F * [i / ((1 + i)^n - 1)]"
   Else
-    e_A1F0i0n = F * [i / ((1 + i)^n - 1)]
+    e_A1F0i0n = F * (i / ((1 + i)^n - 1))
   End If
 
 End Function
@@ -148,7 +148,7 @@ Function e_A1P0i0n(P, i, n, disp)
   If disp Then
     e_A1P0i0n = "A = P * [(i * (1 + i)^n) / ((1 + i)^n - 1)]"
   Else
-    e_A1P0i0n = P * [(i * (1 + i)^n) / ((1 + i)^n - 1)]
+    e_A1P0i0n = P * ((i * (1 + i)^n) / ((1 + i)^n - 1))
   End If
 
 End Function
@@ -160,7 +160,7 @@ Function e_P1A0i0n(A, i, n, disp)
   If disp Then
     e_P1A0i0n = "P = A * [((1 + i)^n - 1) / (i * (1 + i)^n)]"
   Else
-    e_P1A0i0n = A * [((1 + i)^n - 1) / (i * (1 + i)^n)]
+    e_P1A0i0n = A * (((1 + i)^n - 1) / (i * (1 + i)^n))
   End If
 
 End Function
@@ -199,7 +199,7 @@ Function e_UniformCompooundA1(F, r, n, disp)
   If disp Then
     e_UniformCompooundA1 = "F * [(e^r - 1) / (e^r*n - 1)]"
   Else
-    e_UniformCompooundA1 = F * [(exp(r) - 1) / (exp(r*n) - 1)]
+    e_UniformCompooundA1 = F * ((exp(r) - 1) / (exp(r*n) - 1))
   End If
 
 End Function
@@ -210,7 +210,7 @@ Function e_UniformCompoundA2(P, r, n, disp)
   If disp Then
     e_UniformCompoundA2 = "A = P * [(e^(r*n) * (e^(r) - 1)) / (e^(r*n) - 1)]"
   Else
-    e_UniformCompoundA2 = P * [(exp(r*n) * (exp(r) - 1)) / (exp(r*n) - 1)]
+    e_UniformCompoundA2 = P * ((exp(r*n) * (exp(r) - 1)) / (exp(r*n) - 1))
   End If
 
 End Function
@@ -221,7 +221,7 @@ Function e_UniformCompoundF(A, r, n, disp)
   If disp Then
     e_UniformCompoundF = "F = A * [(e^(r*n) - 1) /  (e^(r) - 1)]"
   Else
-    e_UniformCompoundF =A * [(exp(r*n) - 1) /  (exp(r) - 1)]
+    e_UniformCompoundF =A * ((exp(r*n) - 1) /  (exp(r) - 1))
   End If
 
 End Function
@@ -232,7 +232,7 @@ Function e_UniformCompoundP(A, r, n, disp)
   If disp Then
     e_UniformCompoundP = "P = A * [(e^(r*n) - 1) / (e^(r*n) * (e^(r) - 1))]"
   Else
-    e_UniformCompoundP =  A * [(exp(r*n) - 1) / (exp(r*n) * (exp(r) - 1))]
+    e_UniformCompoundP =  A * ((exp(r*n) - 1) / (exp(r*n) * (exp(r) - 1)))
   End If
 
 End Function
@@ -246,7 +246,7 @@ Function e_P1F0r0n(F, r, n, disp)
   If disp Then
     e_P1F0r0n = "P = F * [(e^(r)-1) / (r * e^(r*n))]"
   Else
-    e_P1F0r0n = F * [(exp(r)-1) / (r * exp(r*n))]
+    e_P1F0r0n = F * ((exp(r)-1) / (r * exp(r*n)))
   End If
 
 End Function
@@ -259,7 +259,7 @@ Function e_F1P0r0n(P, r, n, disp)
   If disp Then
     e_F1P0r0n = "F = P * [( (e^(r) - 1) * (e^(r*n)) ) / (r*e^(r))]"
   Else
-    e_F1P0r0n = P * [( (exp(r) - 1) * (exp(r*n)) ) / (r*exp(r))]
+    e_F1P0r0n = P * (( (exp(r) - 1) * (exp(r*n)) ) / (r*exp(r)))
   End If
 
 End Function
