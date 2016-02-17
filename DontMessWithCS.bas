@@ -89,7 +89,18 @@ End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
 'Single Payment
 '--- --- --- --- --- --- --- --- --- --- --- ---
+Function F1P0i0n(P, i, n, disp)
+'(F/P,i,n)
+'F = P(1+r)^n
 
+    If disp Then
+        F1P0i0n = "F = P(1+i)^n"
+    Else
+        F1P0i0n = P * (1 + i) ^ n
+    End If
+
+End Function
+'--- --- --- --- --- --- --- --- --- --- --- ---
 Function P1F0i0n(F, i, n, disp)
 '(P/F, i, n)
 'P = F*(1+i)^-n
@@ -105,7 +116,6 @@ End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
 'Uniform Series
 '--- --- --- --- --- --- --- --- --- --- --- ---
-
 Function F1A0i0n(A, i, n, disp)
 '(F/A, i, n)
 'F = A * [(1 + i) ^ n - 1) / i]
@@ -157,7 +167,6 @@ End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
 'Continuous Compounding at Nominal Rate r : Single Payment
 '--- --- --- --- --- --- --- --- --- --- --- ---
-
 Function SinglePaymentF(P, e, r, n, disp)
 'F = P* e^(r*n)
 
@@ -183,7 +192,6 @@ End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
 'Continuous Compounding at Nominal Rate r : Uniform Series
 '--- --- --- --- --- --- --- --- --- --- --- ---
-
 Function UniformCompooundA1(F, r, n, disp)
 'A = F * [(e^r - 1) / (e^r*n - 1)]
 
@@ -231,7 +239,6 @@ End Function
 '--- --- --- --- --- --- --- --- --- --- --- ---
 ' Continuous Uniform Cash Flow with Continuous Compounding : Present Worth
 '--- --- --- --- --- --- --- --- --- --- --- ---
-
 Function P1F0r0n(F, r, n, disp)
 '(P/F, r, n)
 'P = F * [(e^(r)-1) / (r * e^(r*n))]
@@ -253,23 +260,5 @@ Function F1P0r0n(P, r, n, disp)
   Else
     F1P0r0n = P * [( (exp(r) - 1) * (exp(r*n)) ) / (r*exp(r))]
   End If
-
-End Function
-
-
-
-'--- --- --- --- --- --- --- --- --- --- --- ---
-'Cory's Functions
-'--- --- --- --- --- --- --- --- --- --- --- ---
-Function F1P0i0n(P, i, n, disp)
-
-    '(F/P,i,n)
-    'F = P(1+r)^n
-
-    If disp Then
-        F1P0i0n = "F = P(1+i)^n"
-    Else
-        F1P0i0n = P * (1 + i) ^ n
-    End If
 
 End Function
