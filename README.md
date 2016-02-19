@@ -1,5 +1,5 @@
 # Engineering-Economy
-Getting shit done
+Excel script to allow easy calculation of economic formulas.
 
 ## Function Syntax
 Please put functions in the following example syntax:
